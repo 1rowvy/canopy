@@ -71,7 +71,13 @@ jobs:
         working-directory: frontend
 
       - name: Build with Wails
-        run: wails build -platform ${{ matrix.platform }}
+        run: |
+          export PATH=$PATH:$(go env GOPATH)/bin
+          if [ "${{ matrix.goos }}" = "linux" ]; then
+            wails build -platform ${{ matrix.platform }} -tags webkit2gtk_4_1
+          else
+            wails build -platform ${{ matrix.platform }}
+          fi
 
       - name: Archive (Linux/macOS)
         if: matrix.goos != 'windows'
