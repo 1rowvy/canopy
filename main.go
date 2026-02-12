@@ -17,13 +17,15 @@ func main() {
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:  "canopy",
-		Width:  1024,
-		Height: 768,
+		Title:     "Canopy - Developer Dashboard",
+		Width:     1400,
+		Height:    900,
+		MinWidth:  1200,
+		MinHeight: 700,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
-		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 1},
+		BackgroundColour: &options.RGBA{R: 248, G: 249, B: 250, A: 1}, // Light gray background
 		OnStartup:        app.startup,
 		Bind: []interface{}{
 			app,
