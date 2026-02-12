@@ -34,13 +34,13 @@ Canopy собирает всё в одном месте.
 
 ### Из релиза
 
-Скачать последний билд со страницы [Releases](https://github.com/viktoralyoshin/canopy/releases).
+Скачать последний билд со страницы [Releases](https://github.com/1rowvy/canopy/releases).
 
 ### Из исходников
 
 ```bash
 go install github.com/wailsapp/wails/v2/cmd/wails@latest
-git clone https://github.com/viktoralyoshin/canopy.git
+git clone https://github.com/1rowvy/canopy.git
 cd canopy
 wails build
 ```
@@ -54,35 +54,6 @@ wails build
 3. Вставьте [GitHub Personal Access Token](https://github.com/settings/tokens/new) (scopes: `repo`, `read:user`)
 4. Нажмите **Save Token**
 5. Вернитесь на **Dashboard** — данные подтянутся автоматически
-
----
-
-## Roadmap
-
-### v0.1.0 — MVP
-
-- [x] GitHub интеграция (репо, PR, CI статусы)
-- [x] Дашборд с основными виджетами
-- [x] Десктопное окно
-- [ ] SQLite кеш
-
-### v0.2.0
-
-- [ ] GitLab провайдер
-- [ ] Создание релизов из UI
-- [ ] Десктопные уведомления
-
-### v0.3.0
-
-- [ ] Bitbucket провайдер
-- [ ] Интеграция с Linear / Jira
-- [ ] Быстрые действия: merge PR, retry CI
-
-### v1.0.0
-
-- [ ] Система плагинов
-- [ ] Мульти-аккаунт
-- [ ] CLI-режим
 
 ---
 
